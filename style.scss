@@ -1,0 +1,28 @@
+$primary-color: yellow;
+$secondary-color: green;
+
+@mixin with-border {
+    border: 10px dotted $secondary-color;
+    padding: 10px;
+}
+
+.main-div {
+     >button.demo {
+        font-size: 2rem;
+        background-color: $primary-color;
+        color: $secondary-color;
+        margin: 1rem 50%;
+    }
+
+     p {
+        @include with-border;
+        font-size: 2rem;
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+}
+
+.contrast p{
+    background-color: white;
+    color: red;
+}
